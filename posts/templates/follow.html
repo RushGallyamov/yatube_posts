@@ -1,22 +1,16 @@
 {% extends "base.html" %} 
-{% block title %} Избранные авторы {% endblock %}
-
-{% block content %}
 {% load cache %}
+{% block title %}Избранные авторы{% endblock %}
+{% block header %}Избранные авторы{% endblock %}
 {% cache 20 sidebar %}
+{% block content %}
 <div class="container">
-
-    {% include "menu.html" with index=True %}
-
-        <h1>Избранные авторы</h1>
-
+    {% include "menu.html" with follow=True %}
         {% for post in page %}
             {% include "post_item.html" with post=post %}
         {% endfor %}
-
-        {% if page.has_other_pages %}
-            {% include "paginator.html" with items=page paginator=paginator %}
-        {% endif %}
-        {% endcache %}
+        {% include "paginator.html" with items=page paginator=paginator %}
     </div>
-{% endblock %}
+{% endblock %} 
+{% endcache %}
+
