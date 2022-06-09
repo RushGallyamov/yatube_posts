@@ -1,12 +1,10 @@
 # yatube_post
+Стек технологий:
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
 
 ## Описание:
-
-
-Прототип социальной сети-блога. Реализована система подписок.
-
-
-
+Прототип социальной сети-блога. Реализованы система подписок на авторов, отслеживание избранных авторов.
 ## Установка:
 
 1. Клонировать репозиторий:
@@ -21,7 +19,6 @@ cd yatube_posts
 ```
 python -m venv venv
 pip install -r requirements.txt
-
 ```
 
 4. Выполнить миграции, создать суперпользователя, собрать статику:
